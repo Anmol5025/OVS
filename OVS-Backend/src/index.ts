@@ -7,6 +7,7 @@ import candidateRouter from "./Routes/candidate";
 import cors from 'cors'
 import infoRouter from "./Routes/info";
 import voteRouter from "./Routes/vote";
+import queryRoutes from "./routes/queryRoutes";
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.use("/election", electionRouter);
 app.use("/candidate", candidateRouter);
 app.use("/info", infoRouter);
 app.use("/vote", voteRouter);
+app.use("/api/query", queryRoutes);
 
 const StartDatabase = async () => {
   try {
